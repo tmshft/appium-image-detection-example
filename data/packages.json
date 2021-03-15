@@ -4,13 +4,13 @@
     "name" : "jp.shiftinc.automation.trial.TestMobileApp",
     "children" : [ {
       "name" : "imageSelectorTest",
-      "uid" : "4741572de8180434",
+      "uid" : "d5aecbc80b2c9c82",
       "parentUid" : "8614985c38de061158767926c1502d0d",
       "status" : "passed",
       "time" : {
-        "start" : 1615777766262,
-        "stop" : 1615777784989,
-        "duration" : 18727
+        "start" : 1615780145712,
+        "stop" : 1615780162713,
+        "duration" : 17001
       },
       "flaky" : false,
       "newFailed" : false,

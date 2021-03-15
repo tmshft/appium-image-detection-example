@@ -1,12 +1,12 @@
 {
-  "uid" : "4741572de8180434",
+  "uid" : "d5aecbc80b2c9c82",
   "name" : "imageSelectorTest()",
   "fullName" : "jp.shiftinc.automation.trial.TestMobileApp.imageSelectorTest",
   "historyId" : "93de97df89d1a2df73cd4dcd45800405",
   "time" : {
-    "start" : 1615777766262,
-    "stop" : 1615777784989,
-    "duration" : 18727
+    "start" : 1615780145712,
+    "stop" : 1615780162713,
+    "duration" : 17001
   },
   "description" : "",
   "status" : "passed",
@@ -19,24 +19,24 @@
     "steps" : [ {
       "name" : "イメージセレクタでログイン",
       "time" : {
-        "start" : 1615777766343,
-        "stop" : 1615777783950,
-        "duration" : 17607
+        "start" : 1615780145738,
+        "stop" : 1615780161665,
+        "duration" : 15927
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "3a3f574d9db6921a",
+        "uid" : "3c6e65a6d8648f08",
         "name" : "image-selector",
-        "source" : "3a3f574d9db6921a.png",
+        "source" : "3c6e65a6d8648f08.png",
         "type" : "image/png",
         "size" : 27599
       }, {
-        "uid" : "95775664ff940f01",
+        "uid" : "3bad0695cf3cea55",
         "name" : "template-matched-result",
-        "source" : "95775664ff940f01.png",
+        "source" : "3bad0695cf3cea55.png",
         "type" : "image/png",
-        "size" : 536642
+        "size" : 536114
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -57,10 +57,10 @@
     "value" : "Appiumイメージセレクタテスト"
   }, {
     "name" : "host",
-    "value" : "Mac-1615776115673.local"
+    "value" : "Mac-1615778464610.local"
   }, {
     "name" : "thread",
-    "value" : "18612@Mac-1615776115673.local.Test worker(9)"
+    "value" : "18689@Mac-1615778464610.local.Test worker(9)"
   }, {
     "name" : "framework",
     "value" : "junit-platform"
@@ -93,6 +93,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "4741572de8180434.json",
+  "source" : "d5aecbc80b2c9c82.json",
   "parameterValues" : [ ]
 }
