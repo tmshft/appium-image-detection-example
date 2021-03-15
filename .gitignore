@@ -1,0 +1,8 @@
+allure-results/
+build/
+sut_app/
+
+.idea
+.gradle/
+.allure
+.vscode
