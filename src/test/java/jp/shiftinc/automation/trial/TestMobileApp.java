@@ -34,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TestMobileApp {
     private AppiumDriver driver;
-    private final String resourceDir = "src/test/resources/image/ios/";
+    private final String resourceDir = "src/test/resources/image/";
 
     By loginId() {return By.xpath("//XCUIElementTypeTextField[1]");}
     By loginPwd() {return By.xpath("//XCUIElementTypeSecureTextField[1]");}
