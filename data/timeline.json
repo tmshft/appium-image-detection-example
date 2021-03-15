@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "Mac-1615776115673.local",
+    "children" : [ {
+      "name" : "18612@Mac-1615776115673.local.Test worker(9)",
+      "children" : [ {
+        "name" : "imageSelectorTest()",
+        "uid" : "4741572de8180434",
+        "parentUid" : "150f8fddf57ad73537d25a2278e52c95",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615777766262,
+          "stop" : 1615777784989,
+          "duration" : 18727
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "150f8fddf57ad73537d25a2278e52c95"
+    } ],
+    "uid" : "6e0c7a86e15fc2d187bd55b5b395ab45"
+  } ],
+  "name" : "timeline"
+}

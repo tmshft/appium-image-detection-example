@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "jp.shiftinc.automation.trial.TestMobileApp",
+    "children" : [ {
+      "name" : "imageSelectorTest",
+      "uid" : "4741572de8180434",
+      "parentUid" : "8614985c38de061158767926c1502d0d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615777766262,
+        "stop" : 1615777784989,
+        "duration" : 18727
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "jp.shiftinc.automation.trial.TestMobileApp"
+  } ],
+  "name" : "packages"
+}

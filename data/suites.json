@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "jp.shiftinc.automation.trial.TestMobileApp",
+    "children" : [ {
+      "name" : "imageSelectorTest()",
+      "uid" : "4741572de8180434",
+      "parentUid" : "46258ba5f8150126f36cc0c5f3008df8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615777766262,
+        "stop" : 1615777784989,
+        "duration" : 18727
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "46258ba5f8150126f36cc0c5f3008df8"
+  } ],
+  "name" : "suites"
+}

@@ -1,0 +1,11 @@
+[ {
+  "uid" : "4741572de8180434",
+  "name" : "imageSelectorTest()",
+  "time" : {
+    "start" : 1615777766262,
+    "stop" : 1615777784989,
+    "duration" : 18727
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

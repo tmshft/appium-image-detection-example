@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Mar 15 03:09:26 UTC 2021","Mon Mar 15 03:09:44 UTC 2021","18727","","jp.shiftinc.automation.trial.TestMobileApp","","jp.shiftinc.automation.trial.TestMobileApp","imageSelectorTest","imageSelectorTest()",""
