@@ -52,9 +52,8 @@ jobs:
 
       - name: store report history
         run: |
-          ls -alR build/past_report
-          cp -fr build/past_report/history build/allure-result
-          ls -alR build/allure-result
+          cp -fr build/past_report/history build/allure-results
+          ls -alR build/allure-results
           ./gradlew allureReport
 
 #      - name: upload report
