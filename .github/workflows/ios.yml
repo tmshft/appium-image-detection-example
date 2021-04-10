@@ -40,7 +40,7 @@ jobs:
       - name: execute test
         run: |
           chmod +x ./gradlew
-          ./gradlew clean test allureReport
+          ./gradlew -Dtestos=ios clean test allureReport
 
       - name: deploy to pages
         uses: peaceiris/actions-gh-pages@v3

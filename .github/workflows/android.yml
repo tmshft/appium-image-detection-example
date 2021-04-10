@@ -33,7 +33,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 28
-          script: ./gradlew -Dtestos=android clean test --tests Android allureReport
+          script: ./gradlew -Dtestos=android clean test allureReport
 
 #      - name: execute test
 #        run: |
