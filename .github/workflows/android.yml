@@ -19,10 +19,10 @@ jobs:
           git submodule add --force ${{ secrets.codecommit_sut_repo }} ./sut_app
           git submodule update -i --remote
 
-#      - name: set up opencv4nodejs
-#        run: |
-#          brew install cmake
-#          npm install -g opencv4nodejs
+      - name: set up opencv4nodejs
+        run: |
+          brew install cmake
+          npm install -g opencv4nodejs
 
       - name: set up Appium
         run: |
@@ -36,17 +36,12 @@ jobs:
           script: |
             chmod +x ./gradlew && ./gradlew -Dtestos=android clean test allureReport
 
-#      - name: execute test
-#        run: |
-#          chmod +x ./gradlew
-#          ./gradlew clean test allureReport
-
-#      - name: upload report
-#        uses: actions/upload-artifact@v1
-#        with:
-#          name: allure-report
-#          path: build/reports/allure-report
-#        if: always()
+      - name: upload report
+        uses: actions/upload-artifact@v1
+        with:
+          name: allure-report
+          path: build/reports/allure-report
+        if: always()
 
       - name: jUnit Report
         uses: actions/upload-artifact@v1
