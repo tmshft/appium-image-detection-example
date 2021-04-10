@@ -45,7 +45,7 @@ jobs:
           chmod +x build/past_report
 
       - name: checkout page-branch
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           ref: test-report
           path: build/past_report
