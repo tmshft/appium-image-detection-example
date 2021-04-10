@@ -22,10 +22,10 @@ jobs:
       - name: specify valid Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_12.0.1.app
 
-      - name: set up opencv4nodejs
-        run: |
-          brew install cmake
-          npm install -g opencv4nodejs
+#      - name: set up opencv4nodejs
+#        run: |
+#          brew install cmake
+#          npm install -g opencv4nodejs
 
       - name: set up Appium
         run: |
@@ -37,28 +37,38 @@ jobs:
         with:
           api-level: 28
           script: |
-            chmod +x ./gradlew && ./gradlew clean test allureReport
+            chmod +x ./gradlew && ./gradlew clean test
 
-      - name: upload report
-        uses: actions/upload-artifact@v1
+      - name: tmp directory
+        run: |
+          mkdir -p build/past_report
+          chmod +x build/past_report
+
+      - name: checkout page-branch
+      - uses: actions/checkout@v2
         with:
-          name: allure-report
-          path: build/reports/allure-report
-        if: always()
+          ref: test-report
+          path: build/past_report
 
-#      - name: jUnit Report
+      - name: store report history
+        run: |
+          cp -fr build/past_report/history build/allure-result
+          ./gradlew allureReport
+
+#      - name: upload report
 #        uses: actions/upload-artifact@v1
 #        with:
-#          name: test_rep
-#          path: build/reports/tests
-
-#      - name: deploy to pages
-#        uses: peaceiris/actions-gh-pages@v3
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          publish_dir: build/reports/allure-report
-#          publish_branch: test-report
+#          name: allure-report
+#          path: build/reports/allure-report
 #        if: always()
+
+      - name: deploy to pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/reports/allure-report
+          publish_branch: test-report
+        if: always()
 
 #      - name: comment to pr
 #        uses: actions/github-script@0.3.0
