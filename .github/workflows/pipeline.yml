@@ -1,4 +1,4 @@
-name: Appium Android gui test example
+name: Appium gui test example
 on:
   pull_request:
     branches:
@@ -19,6 +19,9 @@ jobs:
           git submodule add --force ${{ secrets.codecommit_sut_repo }} ./sut_app
           git submodule update -i --remote
 
+      - name: specify valid Xcode Version
+        run: sudo xcode-select -s /Applications/Xcode_12.0.1.app
+
       - name: set up opencv4nodejs
         run: |
           brew install cmake
@@ -34,7 +37,7 @@ jobs:
         with:
           api-level: 28
           script: |
-            chmod +x ./gradlew && ./gradlew -Dtestos=android clean test allureReport
+            chmod +x ./gradlew && ./gradlew clean test allureReport
 
       - name: upload report
         uses: actions/upload-artifact@v1
@@ -43,11 +46,11 @@ jobs:
           path: build/reports/allure-report
         if: always()
 
-      - name: jUnit Report
-        uses: actions/upload-artifact@v1
-        with:
-          name: test_rep
-          path: build/reports/tests
+#      - name: jUnit Report
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: test_rep
+#          path: build/reports/tests
 
 #      - name: deploy to pages
 #        uses: peaceiris/actions-gh-pages@v3
@@ -57,11 +60,11 @@ jobs:
 #          publish_branch: test-report
 #        if: always()
 
-      - name: comment to pr
-        uses: actions/github-script@0.3.0
-        if: github.event_name == 'pull_request'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
-            github.issues.createComment({ issue_number, owner, repo, body: 'ci-test report 👋 <br/><a href="https://tmshft.github.io/appium-image-detection-example/">see report</a>' });
+#      - name: comment to pr
+#        uses: actions/github-script@0.3.0
+#        if: github.event_name == 'pull_request'
+#        with:
+#          github-token: ${{ secrets.GITHUB_TOKEN }}
+#          script: |
+#            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+#            github.issues.createComment({ issue_number, owner, repo, body: 'ci-test report 👋 <br/><a href="https://tmshft.github.io/appium-image-detection-example/">see report</a>' });
