@@ -2,7 +2,7 @@ name: Appium iOS gui test example
 on:
   pull_request:
     branches:
-      - "*"
+      - "*ios*"
 jobs:
   build:
     name: Native App Test

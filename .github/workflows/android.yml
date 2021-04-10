@@ -1,0 +1,71 @@
+name: Appium Android gui test example
+on:
+  pull_request:
+    branches:
+      - "*android*"
+jobs:
+  build:
+    name: Native App Test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+        name: checkout
+
+      - name: checkout app as git submodule
+        run: |
+          echo "${{ secrets.codecommit_key }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -l ${{ secrets.codecommit_id }}"
+          git submodule add --force ${{ secrets.codecommit_sut_repo }} ./sut_app
+          git submodule update -i --remote
+
+#      - name: set up opencv4nodejs
+#        run: |
+#          brew install cmake
+#          npm install -g opencv4nodejs
+
+      - name: set up Appium
+        run: |
+          npm install -g appium@1.18.3
+          appium --log-timestamp --log-no-colors > appium.log &
+
+      - name: Run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 28
+          script: ./gradlew -Dtestos=android clean test --tests Android allureReport
+
+#      - name: execute test
+#        run: |
+#          chmod +x ./gradlew
+#          ./gradlew clean test allureReport
+
+#      - name: upload report
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: allure-report
+#          path: build/reports/allure-report
+#        if: always()
+
+      - name: jUnit Report
+        uses: actions/upload-artifact@v1
+        with:
+          name: test_rep
+          path: build/reports/tests
+
+#      - name: deploy to pages
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: build/reports/allure-report
+#          publish_branch: test-report
+#        if: always()
+
+      - name: comment to pr
+        uses: actions/github-script@0.3.0
+        if: github.event_name == 'pull_request'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ issue_number, owner, repo, body: 'ci-test report 👋 <br/><a href="https://tmshft.github.io/appium-example/">see report</a>' });

@@ -11,10 +11,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -34,24 +32,21 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TestMobileApp {
     private AppiumDriver driver;
-    private final String resourceDir = "src/test/resources/image/";
+    private OSBase osInfo;
 
-    By loginId() {return By.xpath("//XCUIElementTypeTextField[1]");}
-    By loginPwd() {return By.xpath("//XCUIElementTypeSecureTextField[1]");}
-
-   @BeforeAll
+    @BeforeAll
     void setupClass() {
-        driver = new AppiumDriver(url(), readCapabilities());
+        osInfo =  System.getProperty("testos","ios").equals("ios")? new IOSBase():new AndroidBase();
+        driver = new AppiumDriver(url(), osInfo.readCapabilities());
         driver.launchApp();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-        MobileElement loginId = (MobileElement) driver.findElement(loginId());
-        MobileElement loginPwd = (MobileElement) driver.findElement(loginPwd());
+        MobileElement loginId = (MobileElement) driver.findElement(osInfo.loginId());
+        MobileElement loginPwd = (MobileElement) driver.findElement(osInfo.loginPwd());
         loginId.sendKeys("demo");
         loginPwd.click();
         loginPwd.sendKeys("demo");
     }
-
 
     URL url(){
         try {
@@ -60,21 +55,6 @@ class TestMobileApp {
             e.printStackTrace();
             return null;
         }
-    }
-
-    DesiredCapabilities readCapabilities() {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("platformVersion", "14.0");
-        capabilities.setCapability("deviceName", "iPhone 11 Pro Max");
-        capabilities.setCapability("automationName", "XCUITest");
-        capabilities.setCapability("language", "ja");
-        capabilities.setCapability("locale", "ja_JP");
-        capabilities.setCapability("newCommandTimeout", 1000);
-        capabilities.setCapability("app", "sut_app/app/racinesut.zip");
-        capabilities.setCapability("settings[getMatchedImageResult]", true);
-        capabilities.setCapability("settings[imageMatchThreshold]", 0.8);
-        return  capabilities;
     }
 
     @Step("イメージセレクタでログイン")
@@ -93,7 +73,6 @@ class TestMobileApp {
         OccurrenceMatchingResult result = templateMatch("original_template.png");
         // Allureにアタッチ(サービス関数経由）
         addAttachment(Base64.getDecoder().decode(result.getVisualization()), "template-matched-result");
-
         assertNotNull(result.getRect());
     }
 
@@ -105,7 +84,7 @@ class TestMobileApp {
     }
 
     private String getReferenceImageB64(String imageName) throws IOException {
-        BufferedImage image = ImageIO.read(new File(resourceDir + imageName));
+        BufferedImage image = ImageIO.read(new File(osInfo.resourceDir() + imageName));
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         ImageIO.write(image, "png", os);
         return Base64.getEncoder().encodeToString(os.toByteArray());
@@ -115,7 +94,7 @@ class TestMobileApp {
         return driver
                 .findImageOccurrence(
                         driver.getScreenshotAs(OutputType.FILE),
-                        new File(resourceDir + template),
+                        new File(osInfo.resourceDir() + template),
                         new OccurrenceMatchingOptions()
                                 .withThreshold(0.6)
                                 .withEnabledVisualization());
