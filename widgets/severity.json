@@ -1,20 +1,20 @@
 [ {
-  "uid" : "d20829a8da5962f1",
-  "name" : "[1] android",
+  "uid" : "b75ea4f7ee167d03",
+  "name" : "[2] ios",
   "time" : {
-    "start" : 1618076016546,
-    "stop" : 1618076095853,
-    "duration" : 79307
+    "start" : 1618076940484,
+    "stop" : 1618076982095,
+    "duration" : 41611
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "6b4b6901518684fe",
-  "name" : "[2] ios",
+  "uid" : "649bec25dfbc0c69",
+  "name" : "[1] android",
   "time" : {
-    "start" : 1618076096102,
-    "stop" : 1618076138337,
-    "duration" : 42235
+    "start" : 1618076855162,
+    "stop" : 1618076940226,
+    "duration" : 85064
   },
   "status" : "broken",
   "severity" : "normal"
