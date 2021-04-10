@@ -69,6 +69,7 @@ class TestMobileApp {
         loginElm.click();
 
         Thread.sleep(10000);
+        addAttachment(driver.getScreenshotAs(OutputType.BYTES),"img1");
         // テンプレートマッチング
         OccurrenceMatchingResult result = templateMatch("original_template.png");
         // Allureにアタッチ(サービス関数経由）
