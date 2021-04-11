@@ -58,7 +58,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: build/reports/allure-report
           publish_branch: test-report
-        id: always()
+        if: always()
 
       - name: comment to pr
         uses: actions/github-script@0.3.0
