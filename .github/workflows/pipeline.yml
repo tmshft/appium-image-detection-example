@@ -39,11 +39,6 @@ jobs:
           script: |
             chmod +x ./gradlew && ./gradlew clean test
 
-#      - name: tmp directory
-#        run: |
-#          mkdir -p build/past_report
-#          chmod +x build/past_report
-
       - name: checkout page-branch
         uses: actions/checkout@v2
         with:

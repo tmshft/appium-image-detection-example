@@ -4,12 +4,12 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.imagecomparison.OccurrenceMatchingOptions;
 import io.appium.java_client.imagecomparison.OccurrenceMatchingResult;
+import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -23,8 +23,8 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
@@ -43,15 +43,6 @@ class TestMobileApp {
     void setupClass() {
     }
 
-    URL url(){
-        try {
-            return new URL("http://127.0.0.1:4723/wd/hub");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
     @Step("{osName}／イメージセレクタでログイン")
     @ParameterizedTest
     @MethodSource("osMartix")
@@ -67,7 +58,7 @@ class TestMobileApp {
         loginElm.click();
 
         Thread.sleep(10000);
-        addAttachment(driver.getScreenshotAs(OutputType.BYTES),"img1");
+        //addAttachment(driver.getScreenshotAs(OutputType.BYTES),"img1");
         // テンプレートマッチング
         OccurrenceMatchingResult result = templateMatch("original_template.png");
         // Allureにアタッチ(サービス関数経由）
@@ -77,24 +68,30 @@ class TestMobileApp {
 
     Stream<Arguments> osMartix() {
         return Stream.of(
-                arguments("android"),
-                arguments("ios")
+//                arguments("ios"),
+                arguments("android")
         );
     }
 
     @AfterEach
-    void tearDown() {
+    void tearDown() throws IOException {
         if (driver != null) {
+            String base64Video = ((CanRecordScreen) driver).stopRecordingScreen();
+            Files.write(Paths.get(String.format("./build/test_%s.mov",osInfo.osName())), Base64.getDecoder().decode(base64Video));
             driver.closeApp();
         }
     }
 
     private void setup(String os) {
         osInfo =  os.equals("ios")? new IOSBase():new AndroidBase();
-        driver = new AppiumDriver(url(), osInfo.readCapabilities());
+        driver = osInfo.driver();
         driver.launchApp();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
+        if (os.equals("ios")) {
+            ((IOSBase)osInfo).iosDriver.startRecordingScreen();
+        } else {
+            ((AndroidBase)osInfo).androidDriver.startRecordingScreen();
+        }
         MobileElement loginId = (MobileElement) driver.findElement(osInfo.loginId());
         MobileElement loginPwd = (MobileElement) driver.findElement(osInfo.loginPwd());
         loginId.sendKeys("demo");
