@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not create simulator with name 'appiumTest-86015AF4-5248-49D7-8BA3-6B3375E0EF3D-iPhone 11 Pro Max', device type id 'iPhone 11 Pro Max', with runtime ids 'com.apple.CoreSimulator.SimRuntime.iOS-13-2', '13.2'\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618146728916.local', ip: '10.212.6.49', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: driver.version: IOSDriver\nremote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not create simulator with name 'appiumTest-86015AF4-5248-49D7-8BA3-6B3375E0EF3D-iPhone 11 Pro Max', device type id 'iPhone 11 Pro Max', with runtime ids 'com.apple.CoreSimulator.SimRuntime.iOS-13-2', '13.2'\n    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)\n    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:381:37)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618146728916.local', ip: '10.212.6.49', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: driver.version: IOSDriver",
+      "children" : [ {
+        "name" : "[1] ios",
+        "uid" : "b0710ade9c7c31ae",
+        "parentUid" : "b7b08594f98896daaa1092d8d062e8bf",
+        "status" : "broken",
+        "time" : {
+          "start" : 1618149507126,
+          "stop" : 1618149516415,
+          "duration" : 9289
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b7b08594f98896daaa1092d8d062e8bf"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }

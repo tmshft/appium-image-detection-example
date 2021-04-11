@@ -1,12 +1,12 @@
 {
-  "uid" : "dd8398508143ed1c",
-  "name" : "[2] ios",
+  "uid" : "59599862c409c2d0",
+  "name" : "[2] android",
   "fullName" : "jp.shiftinc.automation.trial.TestMobileApp.imageSelectorTest",
   "historyId" : "eb9b2b4d493673f5d7d98df5985e16f9",
   "time" : {
-    "start" : 1618079107219,
-    "stop" : 1618079141846,
-    "duration" : 34627
+    "start" : 1618149516529,
+    "stop" : 1618149590357,
+    "duration" : 73828
   },
   "description" : "",
   "status" : "passed",
@@ -17,43 +17,43 @@
     "description" : "",
     "status" : "passed",
     "steps" : [ {
-      "name" : "ios／イメージセレクタでログイン",
+      "name" : "android／イメージセレクタでログイン",
       "time" : {
-        "start" : 1618079107221,
-        "stop" : 1618079141739,
-        "duration" : 34518
+        "start" : 1618149516530,
+        "stop" : 1618149589476,
+        "duration" : 72946
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "402fbcd6ee344962",
+        "uid" : "dd50eb41b82f8e18",
         "name" : "image-selector",
-        "source" : "402fbcd6ee344962.png",
+        "source" : "dd50eb41b82f8e18.png",
         "type" : "image/png",
-        "size" : 29067
+        "size" : 13344
       }, {
-        "uid" : "3d265b727e683929",
-        "name" : "img1",
-        "source" : "3d265b727e683929.png",
-        "type" : "image/png",
-        "size" : 29475
-      }, {
-        "uid" : "4af0b73d2e09a601",
+        "uid" : "1452322b70f09cd7",
         "name" : "template-matched-result",
-        "source" : "4af0b73d2e09a601.png",
+        "source" : "1452322b70f09cd7.png",
         "type" : "image/png",
-        "size" : 39090
+        "size" : 39049
       } ],
       "parameters" : [ {
         "name" : "osName",
-        "value" : "ios"
+        "value" : "android"
       } ],
       "stepsCount" : 0,
-      "attachmentsCount" : 3,
+      "attachmentsCount" : 2,
       "shouldDisplayMessage" : false,
       "hasContent" : true
     } ],
-    "attachments" : [ ],
+    "attachments" : [ {
+      "uid" : "8f737152379100ec",
+      "name" : "test_android.mov",
+      "source" : "8f737152379100ec.mov",
+      "type" : "video/quicktime",
+      "size" : 126500
+    } ],
     "parameters" : [ ],
     "stepsCount" : 1,
     "attachmentsCount" : 3,
@@ -66,10 +66,10 @@
     "value" : "Appiumイメージセレクタテスト"
   }, {
     "name" : "host",
-    "value" : "Mac-1618076162357.local"
+    "value" : "Mac-1618146728916.local"
   }, {
     "name" : "thread",
-    "value" : "17313@Mac-1618076162357.local.Test worker(9)"
+    "value" : "17298@Mac-1618146728916.local.Test worker(9)"
   }, {
     "name" : "framework",
     "value" : "junit-platform"
@@ -105,11 +105,19 @@
         "failed" : 0,
         "broken" : 2,
         "skipped" : 0,
-        "passed" : 1,
+        "passed" : 2,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
+        "uid" : "dd8398508143ed1c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618079107219,
+          "stop" : 1618079141846,
+          "duration" : 34627
+        }
+      }, {
         "uid" : "b75ea4f7ee167d03",
         "status" : "broken",
         "statusDetails" : "An unknown server-side error occurred while processing the command. Original error: 'opencv4nodejs' module is required to use OpenCV features. Please install it first ('npm i -g opencv4nodejs') and restart Appium. Read https://github.com/justadudewhohacks/opencv4nodejs#how-to-install for more details on this topic.\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618075470828.local', ip: '10.212.4.56', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.AppiumDriver\nCapabilities {app: sut_app/app/racinesut.apk, appPackage: jp.shiftinc.automation.racine, automationName: UiAutomator2, databaseEnabled: false, desired: {app: sut_app/app/racinesut.apk, automationName: UiAutomator2, deviceName: Android Emulator, newCommandTimeout: 1000, platformName: android, platformVersion: 9.0}, deviceApiLevel: 28, deviceManufacturer: unknown, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 160, deviceScreenSize: 320x640, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 1000, pixelRatio: 1, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 24, takesScreenshot: true, viewportRect: {height: 616, left: 0, top: 24, width: 320}, warnings: {}, webStorageEnabled: false}\nSession ID: 00157af8-c514-450a-9332-60cf04e98e6e\n*** Element info: {Using=-image, value=iVBORw0KGgoAAAANSUhEUgAAAN4AAAAnCAIAAADvmGExAAADm0lEQVR42u2dWUhUURjHfREk6CEiJAgxiiQMWyBMUxJDWjAwaFPTSLCiosJMSRCxh8ogqIzC6sUWxQgMlMQ0DHHJJZcyHXVGZ3Guy+iMo87cmTt3rn2DUHpnUcegqfkffg/Oufeecz38POf7zhH1mUVB8cjigyFA8VA1e3yCAPAooCaAmgBATQA1AYCaAGoCADUBgJoAagIANT0FiV+I9tEr5aFUDAXU/JvoCko0Ofm/PtLX+uLysZv32aZODA7UXCm9q3dJfINd3+CwXrpxv8CayMXfNYHRvEYrj0hg237I95xYtOv+9RHGxo6Ry7cWVG7Yx7Z8H7mYCyO9XU3Dp0bXv/DCtnY5fHD6ffUsz6tPpSkiE+dQxZ6neXTo+NWl9GtTsL3bamCZ5Mz59X1rQ2c+1s8Kgjb/NaT0ajXJA1KESclyiLGhnW3+Zv+UOj6N7LH3WLDw8rCTi3Y6FHfJohrmx3WqIxcchwpPi6n9mar6fv9w0SXZlgOyzTFQ0wvUrKybqW5wdnWqtMo+cCQ5OCVD1ooiAcPnZm5Atchk6R+ue1JEBhvr22RbD7u4czTtrmAyj98pEL/Su0p9UTnUhJpiNaUBUeYeGalJkeWC+sBowcxpH7501hSt1BP3XvBaPY3ydFnNUt5NHioOWGkin7VaReEp1ISaQcqYs5yCobWYch3RnZrcx7QED+48Kt5O8g2m6FP/poyWb4osJwtLrZNTtF678aoUKtCzNGsi1oSaYjWNdV9NnRJa0MXZekAUmTdTUStelK/d5scmaFgtI+Oko3STLUakLN4NNeV746kRTqbsWxcGNaGmWM3eVdv71ux2cFvJB+u0YWBbrKh+cEccTXKUM82PSt1Qk0nK4CcmObmaGkSGDjWdpkEihlOzKf4bz3u+xB6XpaYs6CAFA9Q+29rlOm2CmlBz4S7S6RsCazLUtkj8Qv6smhRZUmAqGFmKULUPCl2fC0DN/3Nfc5Etd0f7mnP5Dc2UgoWnG+x3H91Wk0nOpJ8Hi3rUtktq5mjKtA9toaZ3nAbVNNm23JMyHGL80uHwNIgumbullJJPva1wdpLpVE2tXvesxKmaKVmUhlNGNZqeJ9qfgpre9W2rE65TmuL02ObYFebMgoNERWQip2BopDipQp2Y7kaPtpN3l3vm3rx2Q80VocnJHz6XjXGAmgBqQk0ANQGAmgBqAgA1AdQEAGoCADXBP6km/mY4Cv7NAArKMspPZgxh+qBTJZoAAAAASUVORK5CYII=}",
@@ -131,6 +139,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "dd8398508143ed1c.json",
+  "source" : "59599862c409c2d0.json",
   "parameterValues" : [ ]
 }
