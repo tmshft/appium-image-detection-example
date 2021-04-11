@@ -48,6 +48,7 @@ jobs:
 
       - name: inject report history
         run: |
+          mkdir -p build/past_report/history
           cp -fr build/past_report/history build/allure-results
           ./gradlew allureReport
 
@@ -57,7 +58,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: build/reports/allure-report
           publish_branch: test-report
-        if: always()
+        id: akways()
 
       - name: comment to pr
         uses: actions/github-script@0.3.0
