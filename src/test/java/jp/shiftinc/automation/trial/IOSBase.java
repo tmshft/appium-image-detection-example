@@ -30,9 +30,11 @@ class IOSBase extends OSBase {
     DesiredCapabilities readCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("platformVersion", "13.2");
+        capabilities.setCapability("platformVersion", "14.0");
         capabilities.setCapability("deviceName", "iPhone 11 Pro Max");
         capabilities.setCapability("automationName", "XCUITest");
+        capabilities.setCapability("language", "ja");
+        capabilities.setCapability("locale", "ja_JP");
         capabilities.setCapability("newCommandTimeout", 1000);
         capabilities.setCapability("app", "sut_app/app/racinesut.zip");
         capabilities.setCapability("settings[getMatchedImageResult]", true);
