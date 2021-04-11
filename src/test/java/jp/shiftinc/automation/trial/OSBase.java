@@ -17,7 +17,7 @@ abstract class OSBase {
 
     URL url(){
         try {
-            return new URL("http://127.0.0.1:4724/wd/hub");
+            return new URL("http://127.0.0.1:4723/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return null;

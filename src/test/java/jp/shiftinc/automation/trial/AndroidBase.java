@@ -30,7 +30,7 @@ class AndroidBase extends OSBase {
     DesiredCapabilities readCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        //capabilities.setCapability("platformVersion", "9.0");
+        capabilities.setCapability("platformVersion", "9.0");
         capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("newCommandTimeout", 1000);

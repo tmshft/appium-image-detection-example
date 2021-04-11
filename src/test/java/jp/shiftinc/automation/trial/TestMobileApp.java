@@ -23,8 +23,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
@@ -68,16 +66,22 @@ class TestMobileApp {
 
     Stream<Arguments> osMartix() {
         return Stream.of(
-//                arguments("ios"),
+                arguments("ios"),
                 arguments("android")
         );
     }
 
     @AfterEach
-    void tearDown() throws IOException {
+    void tearDown() {
         if (driver != null) {
             String base64Video = ((CanRecordScreen) driver).stopRecordingScreen();
-            Files.write(Paths.get(String.format("./build/test_%s.mov",osInfo.osName())), Base64.getDecoder().decode(base64Video));
+            //Files.write(Paths.get(String.format("./build/test_%s.mov",osInfo.osName())), Base64.getDecoder().decode(base64Video));
+            Allure.addAttachment(
+                    String.format("test_%s.mov",osInfo.osName()),
+                    "video/quicktime",
+                    new ByteArrayInputStream(Base64.getDecoder().decode(base64Video)),
+                    "mov"
+            );
             driver.closeApp();
         }
     }
