@@ -3,22 +3,22 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not create simulator with name 'appiumTest-86015AF4-5248-49D7-8BA3-6B3375E0EF3D-iPhone 11 Pro Max', device type id 'iPhone 11 Pro Max', with runtime ids 'com.apple.CoreSimulator.SimRuntime.iOS-13-2', '13.2'\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618146728916.local', ip: '10.212.6.49', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: driver.version: IOSDriver\nremote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not create simulator with name 'appiumTest-86015AF4-5248-49D7-8BA3-6B3375E0EF3D-iPhone 11 Pro Max', device type id 'iPhone 11 Pro Max', with runtime ids 'com.apple.CoreSimulator.SimRuntime.iOS-13-2', '13.2'\n    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)\n    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:381:37)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618146728916.local', ip: '10.212.6.49', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: driver.version: IOSDriver",
+      "name" : "An unknown server-side error occurred while processing the command. Original error: 'ffmpeg' binary is not found in PATH. Install it using 'brew install ffmpeg'. Check https://www.ffmpeg.org/download.html for more details.\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618148399786.local', ip: '10.79.9.134', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.ios.IOSDriver\nCapabilities {app: sut_app/app/racinesut.zip, automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 11 Pro Max, javascriptEnabled: true, language: ja, locale: ja_JP, locationContextEnabled: false, networkConnectionEnabled: false, newCommandTimeout: 1000, platform: MAC, platformName: iOS, platformVersion: 14.0, takesScreenshot: true, udid: E4BE3EB0-6128-41F4-ABAD-237..., webStorageEnabled: false}\nSession ID: ab32229a-3655-4444-9c23-f45adca6bd0b",
       "children" : [ {
         "name" : "[1] ios",
-        "uid" : "b0710ade9c7c31ae",
-        "parentUid" : "b7b08594f98896daaa1092d8d062e8bf",
+        "uid" : "616ab6ec9dde89bb",
+        "parentUid" : "ee60b1d5e7dcb1306546f987f8c9c627",
         "status" : "broken",
         "time" : {
-          "start" : 1618149507126,
-          "stop" : 1618149516415,
-          "duration" : 9289
+          "start" : 1618151112498,
+          "stop" : 1618151551516,
+          "duration" : 439018
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "b7b08594f98896daaa1092d8d062e8bf"
+      "uid" : "ee60b1d5e7dcb1306546f987f8c9c627"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
