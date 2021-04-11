@@ -24,9 +24,9 @@ jobs:
 
       - name: set up opencv4nodejs
         run: |
-          brew install ffmpeg
           brew install cmake
           npm install -g opencv4nodejs
+          brew install ffmpeg
 
       - name: set up Appium
         run: |
