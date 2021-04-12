@@ -1,26 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618182982819.local', ip: '10.40.0.36', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.ios.IOSDriver\nCapabilities {app: sut_app/app/racinesut.zip, automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 11 Pro Max, javascriptEnabled: true, language: ja, locale: ja_JP, locationContextEnabled: false, networkConnectionEnabled: false, newCommandTimeout: 1000, platform: MAC, platformName: iOS, platformVersion: 14.0, takesScreenshot: true, udid: E4BE3EB0-6128-41F4-ABAD-237..., webStorageEnabled: false}\nSession ID: 0f2b7468-0dee-44f8-9595-4e84c20ec25c\n*** Element info: {Using=xpath, value=//android.widget.EditText[1]}",
+      "name" : "An unknown server-side error occurred while processing the command. Original error: Cannot find any occurrences of the partial image in the full image. Original error: Error: Cannot find any occurrences of the partial image in the full image above the threshold of 0.6. Highest match value found was 0.26523658633232117\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618186917964.local', ip: '10.212.6.103', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: sut_app/app/racinesut.apk, appPackage: jp.shiftinc.automation.racine, automationName: UiAutomator2, databaseEnabled: false, desired: {app: sut_app/app/racinesut.apk, automationName: UiAutomator2, deviceName: Android Emulator, newCommandTimeout: 1000, platformName: android, platformVersion: 9.0}, deviceApiLevel: 28, deviceManufacturer: unknown, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 160, deviceScreenSize: 320x640, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 1000, pixelRatio: 1, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 24, takesScreenshot: true, viewportRect: {height: 616, left: 0, top: 24, width: 320}, warnings: {}, webStorageEnabled: false}\nSession ID: 4ccd00e7-d8b9-4291-9f5a-6b0d95b7f462",
       "children" : [ {
-        "name" : "[1] ios",
-        "uid" : "91203c2b915f337f",
-        "parentUid" : "cdb4a8f1cfb12d2bf8ec8707aa58152d",
+        "name" : "[2] android",
+        "uid" : "2b9df7f41e929abe",
+        "parentUid" : "24b6512930fe1a743a00e63250511b45",
         "status" : "broken",
         "time" : {
-          "start" : 1618185977179,
-          "stop" : 1618186492396,
-          "duration" : 515217
+          "start" : 1618189451337,
+          "stop" : 1618189537473,
+          "duration" : 86136
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "cdb4a8f1cfb12d2bf8ec8707aa58152d"
+      "uid" : "24b6512930fe1a743a00e63250511b45"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
-  } ],
-  "name" : "categories"
+  } ]
 }
