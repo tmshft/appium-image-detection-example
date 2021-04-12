@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "Mac-1618182982819.local",
+    "children" : [ {
+      "name" : "18693@Mac-1618182982819.local.Test worker(9)",
+      "children" : [ {
+        "name" : "[1] ios",
+        "uid" : "91203c2b915f337f",
+        "parentUid" : "f3b38cfce2977673f2583cbc057c9346",
+        "status" : "broken",
+        "time" : {
+          "start" : 1618185977179,
+          "stop" : 1618186492396,
+          "duration" : 515217
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "[2] android",
+        "uid" : "4ae2d4eb7247d7c9",
+        "parentUid" : "f3b38cfce2977673f2583cbc057c9346",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618186492657,
+          "stop" : 1618186569549,
+          "duration" : 76892
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f3b38cfce2977673f2583cbc057c9346"
+    } ],
+    "uid" : "30ffd7d864d34aca47a94eb723cadb4d"
+  } ],
+  "name" : "timeline"
+}

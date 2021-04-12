@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618182982819.local', ip: '10.40.0.36', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.ios.IOSDriver\nCapabilities {app: sut_app/app/racinesut.zip, automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 11 Pro Max, javascriptEnabled: true, language: ja, locale: ja_JP, locationContextEnabled: false, networkConnectionEnabled: false, newCommandTimeout: 1000, platform: MAC, platformName: iOS, platformVersion: 14.0, takesScreenshot: true, udid: E4BE3EB0-6128-41F4-ABAD-237..., webStorageEnabled: false}\nSession ID: 0f2b7468-0dee-44f8-9595-4e84c20ec25c\n*** Element info: {Using=xpath, value=//android.widget.EditText[1]}",
+      "children" : [ {
+        "name" : "[1] ios",
+        "uid" : "91203c2b915f337f",
+        "parentUid" : "cdb4a8f1cfb12d2bf8ec8707aa58152d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1618185977179,
+          "stop" : 1618186492396,
+          "duration" : 515217
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cdb4a8f1cfb12d2bf8ec8707aa58152d"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

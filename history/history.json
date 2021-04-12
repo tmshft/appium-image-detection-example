@@ -1,0 +1,41 @@
+{
+  "eb9b2b4d493673f5d7d98df5985e16f9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4ae2d4eb7247d7c9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1618186492657,
+        "stop" : 1618186569549,
+        "duration" : 76892
+      }
+    } ]
+  },
+  "14c28b3167ba00fe4c5fb5445adfcc9b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "91203c2b915f337f",
+      "status" : "broken",
+      "statusDetails" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618182982819.local', ip: '10.40.0.36', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.ios.IOSDriver\nCapabilities {app: sut_app/app/racinesut.zip, automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 11 Pro Max, javascriptEnabled: true, language: ja, locale: ja_JP, locationContextEnabled: false, networkConnectionEnabled: false, newCommandTimeout: 1000, platform: MAC, platformName: iOS, platformVersion: 14.0, takesScreenshot: true, udid: E4BE3EB0-6128-41F4-ABAD-237..., webStorageEnabled: false}\nSession ID: 0f2b7468-0dee-44f8-9595-4e84c20ec25c\n*** Element info: {Using=xpath, value=//android.widget.EditText[1]}",
+      "time" : {
+        "start" : 1618185977179,
+        "stop" : 1618186492396,
+        "duration" : 515217
+      }
+    } ]
+  }
+}
