@@ -95,6 +95,7 @@ class TestMobileApp {
             ((IOSBase)osInfo).iosDriver.startRecordingScreen(
                     new IOSStartScreenRecordingOptions()
                             .withVideoType("libx264")
+                            .withVideoScale("320:-1")
                             .withVideoQuality(IOSStartScreenRecordingOptions.VideoQuality.MEDIUM)
             );
         } else {
