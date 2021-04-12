@@ -1,12 +1,12 @@
 {
-  "uid" : "4c65acd7a126a2c4",
+  "uid" : "b527e76a7bcdb7be",
   "name" : "[1] ios",
   "fullName" : "jp.shiftinc.automation.trial.TestMobileApp.imageSelectorTest",
   "historyId" : "14c28b3167ba00fe4c5fb5445adfcc9b",
   "time" : {
-    "start" : 1618195243470,
-    "stop" : 1618195797645,
-    "duration" : 554175
+    "start" : 1618197689043,
+    "stop" : 1618198198160,
+    "duration" : 509117
   },
   "description" : "",
   "status" : "passed",
@@ -19,24 +19,24 @@
     "steps" : [ {
       "name" : "ios／イメージセレクタでログイン",
       "time" : {
-        "start" : 1618195243524,
-        "stop" : 1618195795943,
-        "duration" : 552419
+        "start" : 1618197689102,
+        "stop" : 1618198196194,
+        "duration" : 507092
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "465898fcff04aa50",
+        "uid" : "92cea0dfb91ab965",
         "name" : "image-selector",
-        "source" : "465898fcff04aa50.png",
+        "source" : "92cea0dfb91ab965.png",
         "type" : "image/png",
         "size" : 27599
       }, {
-        "uid" : "f385226816a5bcae",
+        "uid" : "4ec4db063f73388e",
         "name" : "template-matched-result",
-        "source" : "f385226816a5bcae.png",
+        "source" : "4ec4db063f73388e.png",
         "type" : "image/png",
-        "size" : 537693
+        "size" : 538661
       } ],
       "parameters" : [ {
         "name" : "osName",
@@ -48,11 +48,11 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "164c585c9c76fd7c",
+      "uid" : "1ab252cd08e65aa4",
       "name" : "video",
-      "source" : "164c585c9c76fd7c.mp4",
+      "source" : "1ab252cd08e65aa4.mp4",
       "type" : "video/mp4",
-      "size" : 1587146
+      "size" : 178381
     } ],
     "parameters" : [ ],
     "stepsCount" : 1,
@@ -66,10 +66,10 @@
     "value" : "Appiumイメージセレクタテスト"
   }, {
     "name" : "host",
-    "value" : "Mac-1618192974396.local"
+    "value" : "Mac-1618195901015.local"
   }, {
     "name" : "thread",
-    "value" : "18726@Mac-1618192974396.local.Test worker(9)"
+    "value" : "18682@Mac-1618195901015.local.Test worker(9)"
   }, {
     "name" : "framework",
     "value" : "junit-platform"
@@ -105,11 +105,19 @@
         "failed" : 0,
         "broken" : 1,
         "skipped" : 0,
-        "passed" : 4,
+        "passed" : 5,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
+        "uid" : "4c65acd7a126a2c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618195243470,
+          "stop" : 1618195797645,
+          "duration" : 554175
+        }
+      }, {
         "uid" : "1486262746fddb53",
         "status" : "passed",
         "time" : {
@@ -146,6 +154,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "4c65acd7a126a2c4.json",
+  "source" : "b527e76a7bcdb7be.json",
   "parameterValues" : [ ]
 }

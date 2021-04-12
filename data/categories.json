@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "An unknown server-side error occurred while processing the command. Original error: Cannot find any occurrences of the partial image in the full image. Original error: Error: Cannot find any occurrences of the partial image in the full image above the threshold of 0.6. Highest match value found was 0.26523658633232117\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618195901015.local', ip: '10.212.4.220', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: sut_app/app/racinesut.apk, appPackage: jp.shiftinc.automation.racine, automationName: UiAutomator2, databaseEnabled: false, desired: {app: sut_app/app/racinesut.apk, automationName: UiAutomator2, deviceName: Android Emulator, newCommandTimeout: 1000, platformName: android, platformVersion: 9.0}, deviceApiLevel: 28, deviceManufacturer: unknown, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 160, deviceScreenSize: 320x640, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 1000, pixelRatio: 1, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 24, takesScreenshot: true, viewportRect: {height: 616, left: 0, top: 24, width: 320}, warnings: {}, webStorageEnabled: false}\nSession ID: 5f409be1-2a9b-4757-b094-d31f909f3033",
+      "children" : [ {
+        "name" : "[2] android",
+        "uid" : "765ba40afb4a760f",
+        "parentUid" : "ceb4822486febcd15e8c54ded0a465c3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1618198198455,
+          "stop" : 1618198275452,
+          "duration" : 76997
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ceb4822486febcd15e8c54ded0a465c3"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }

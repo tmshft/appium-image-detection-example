@@ -2,13 +2,22 @@
   "eb9b2b4d493673f5d7d98df5985e16f9" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 2,
       "skipped" : 0,
       "passed" : 4,
       "unknown" : 0,
-      "total" : 5
+      "total" : 6
     },
     "items" : [ {
+      "uid" : "765ba40afb4a760f",
+      "status" : "broken",
+      "statusDetails" : "An unknown server-side error occurred while processing the command. Original error: Cannot find any occurrences of the partial image in the full image. Original error: Error: Cannot find any occurrences of the partial image in the full image above the threshold of 0.6. Highest match value found was 0.26523658633232117\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618195901015.local', ip: '10.212.4.220', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: sut_app/app/racinesut.apk, appPackage: jp.shiftinc.automation.racine, automationName: UiAutomator2, databaseEnabled: false, desired: {app: sut_app/app/racinesut.apk, automationName: UiAutomator2, deviceName: Android Emulator, newCommandTimeout: 1000, platformName: android, platformVersion: 9.0}, deviceApiLevel: 28, deviceManufacturer: unknown, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 160, deviceScreenSize: 320x640, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 1000, pixelRatio: 1, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 24, takesScreenshot: true, viewportRect: {height: 616, left: 0, top: 24, width: 320}, warnings: {}, webStorageEnabled: false}\nSession ID: 5f409be1-2a9b-4757-b094-d31f909f3033",
+      "time" : {
+        "start" : 1618198198455,
+        "stop" : 1618198275452,
+        "duration" : 76997
+      }
+    }, {
       "uid" : "b9b57dddefc1d668",
       "status" : "passed",
       "time" : {
@@ -56,11 +65,19 @@
       "failed" : 0,
       "broken" : 1,
       "skipped" : 0,
-      "passed" : 4,
+      "passed" : 5,
       "unknown" : 0,
-      "total" : 5
+      "total" : 6
     },
     "items" : [ {
+      "uid" : "b527e76a7bcdb7be",
+      "status" : "passed",
+      "time" : {
+        "start" : 1618197689043,
+        "stop" : 1618198198160,
+        "duration" : 509117
+      }
+    }, {
       "uid" : "4c65acd7a126a2c4",
       "status" : "passed",
       "time" : {
