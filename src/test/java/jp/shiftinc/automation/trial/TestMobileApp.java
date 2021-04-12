@@ -59,7 +59,7 @@ class TestMobileApp {
         addAttachment(Base64.getDecoder().decode(imageResult), "image-selector");
         loginElm.click();
 
-        Thread.sleep(10000);
+        Thread.sleep(20000);
         //addAttachment(driver.getScreenshotAs(OutputType.BYTES),"img1");
         // テンプレートマッチング
         OccurrenceMatchingResult result = templateMatch("original_template.png");
@@ -95,7 +95,7 @@ class TestMobileApp {
             ((IOSBase)osInfo).iosDriver.startRecordingScreen(
                     new IOSStartScreenRecordingOptions()
                             .withVideoType("libx264")
-                            .withVideoScale("320:-1")
+                            .withVideoScale("320:640")
                             .withVideoQuality(IOSStartScreenRecordingOptions.VideoQuality.MEDIUM)
             );
         } else {
