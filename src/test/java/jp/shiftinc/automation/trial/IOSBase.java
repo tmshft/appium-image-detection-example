@@ -22,9 +22,9 @@ class IOSBase extends OSBase {
     public String resourceDir() {return "src/test/resources/image/ios/";}
 
     @Override
-    public By loginId() {return By.xpath("//android.widget.EditText[1]");}
+    public By loginId() {return By.xpath("//XCUIElementTypeTextField[1]");}
     @Override
-    public By loginPwd() {return By.xpath("//android.widget.EditText[2]");}
+    public By loginPwd() {return By.xpath("//XCUIElementTypeSecureTextField[1]");}
 
     @Override
     DesiredCapabilities readCapabilities() {
