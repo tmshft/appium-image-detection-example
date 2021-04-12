@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.imagecomparison.OccurrenceMatchingOptions;
 import io.appium.java_client.imagecomparison.OccurrenceMatchingResult;
+import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
 import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Feature;
@@ -92,7 +93,9 @@ class TestMobileApp {
         driver.launchApp();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         if (os.equals("ios")) {
-            ((IOSBase)osInfo).iosDriver.startRecordingScreen();
+            ((IOSBase)osInfo).iosDriver.startRecordingScreen(
+                    new IOSStartScreenRecordingOptions().withVideoType("mpeg4")
+            );
         } else {
             ((AndroidBase)osInfo).androidDriver.startRecordingScreen();
         }
