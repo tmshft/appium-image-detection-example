@@ -92,7 +92,9 @@ class TestMobileApp {
         driver.launchApp();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         if (os.equals("ios")) {
-            ((IOSBase)osInfo).iosDriver.startRecordingScreen();
+            ((IOSBase)osInfo).iosDriver.startRecordingScreen(
+                    new IOSStartScreenRecordingOptions().withVideoType("mpeg4")
+            );
         } else {
             ((AndroidBase)osInfo).androidDriver.startRecordingScreen();
         }
@@ -125,7 +127,7 @@ class TestMobileApp {
     }
 
     @SuppressWarnings("UnusedReturnValue")
-    @Attachment(value = "video",type="video/mp4")
+    @Attachment(value = "video",type="video/mp4",fileExtension = "mp4")
     private byte[] attachVideo(String path) throws IOException {
         return getFile(path);
     }
