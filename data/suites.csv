@@ -1,3 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Apr 12 00:56:01 UTC 2021","Mon Apr 12 01:04:11 UTC 2021","490016","","jp.shiftinc.automation.trial.TestMobileApp","","jp.shiftinc.automation.trial.TestMobileApp","imageSelectorTest","[1] ios",""
-"broken","Mon Apr 12 01:04:11 UTC 2021","Mon Apr 12 01:05:37 UTC 2021","86136","","jp.shiftinc.automation.trial.TestMobileApp","","jp.shiftinc.automation.trial.TestMobileApp","imageSelectorTest","[2] android",""
+"passed","Mon Apr 12 01:14:56 UTC 2021","Mon Apr 12 01:22:54 UTC 2021","478720","","jp.shiftinc.automation.trial.TestMobileApp","","jp.shiftinc.automation.trial.TestMobileApp","imageSelectorTest","[1] ios",""
+"passed","Mon Apr 12 01:22:55 UTC 2021","Mon Apr 12 01:24:06 UTC 2021","71851","","jp.shiftinc.automation.trial.TestMobileApp","","jp.shiftinc.automation.trial.TestMobileApp","imageSelectorTest","[2] android",""

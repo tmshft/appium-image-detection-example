@@ -1,35 +1,35 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
-  "name" : "packages",
   "children" : [ {
     "name" : "jp.shiftinc.automation.trial.TestMobileApp",
     "children" : [ {
       "name" : "imageSelectorTest",
-      "uid" : "1d079c1db6cebc95",
+      "uid" : "9f7f17d3a5239228",
       "parentUid" : "8614985c38de061158767926c1502d0d",
       "status" : "passed",
       "time" : {
-        "start" : 1618188961052,
-        "stop" : 1618189451068,
-        "duration" : 490016
+        "start" : 1618190096103,
+        "stop" : 1618190574823,
+        "duration" : 478720
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "imageSelectorTest",
-      "uid" : "2b9df7f41e929abe",
+      "uid" : "62a1f4000b5b1041",
       "parentUid" : "8614985c38de061158767926c1502d0d",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1618189451337,
-        "stop" : 1618189537473,
-        "duration" : 86136
+        "start" : 1618190575137,
+        "stop" : 1618190646988,
+        "duration" : 71851
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
     "uid" : "jp.shiftinc.automation.trial.TestMobileApp"
-  } ]
+  } ],
+  "name" : "packages"
 }

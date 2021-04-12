@@ -1,12 +1,12 @@
 {
-  "uid" : "1d079c1db6cebc95",
+  "uid" : "9f7f17d3a5239228",
   "name" : "[1] ios",
   "fullName" : "jp.shiftinc.automation.trial.TestMobileApp.imageSelectorTest",
   "historyId" : "14c28b3167ba00fe4c5fb5445adfcc9b",
   "time" : {
-    "start" : 1618188961052,
-    "stop" : 1618189451068,
-    "duration" : 490016
+    "start" : 1618190096103,
+    "stop" : 1618190574823,
+    "duration" : 478720
   },
   "description" : "",
   "status" : "passed",
@@ -19,24 +19,24 @@
     "steps" : [ {
       "name" : "ios／イメージセレクタでログイン",
       "time" : {
-        "start" : 1618188961113,
-        "stop" : 1618189449337,
-        "duration" : 488224
+        "start" : 1618190096154,
+        "stop" : 1618190573383,
+        "duration" : 477229
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "a17f47d16fbcb8aa",
+        "uid" : "a19e2af14b2afe1f",
         "name" : "image-selector",
-        "source" : "a17f47d16fbcb8aa.png",
+        "source" : "a19e2af14b2afe1f.png",
         "type" : "image/png",
         "size" : 27599
       }, {
-        "uid" : "62369feecc347ae7",
+        "uid" : "968af3df188c3951",
         "name" : "template-matched-result",
-        "source" : "62369feecc347ae7.png",
+        "source" : "968af3df188c3951.png",
         "type" : "image/png",
-        "size" : 536730
+        "size" : 536779
       } ],
       "parameters" : [ {
         "name" : "osName",
@@ -48,11 +48,11 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "87dec5f26767cf9e",
-      "name" : "test_ios.mov",
-      "source" : "87dec5f26767cf9e.mov",
-      "type" : "video/quicktime",
-      "size" : 1648206
+      "uid" : "34281369a9e8dd6f",
+      "name" : "video",
+      "source" : "34281369a9e8dd6f.qt",
+      "type" : "video/mp4",
+      "size" : 1546508
     } ],
     "parameters" : [ ],
     "stepsCount" : 1,
@@ -66,10 +66,10 @@
     "value" : "Appiumイメージセレクタテスト"
   }, {
     "name" : "host",
-    "value" : "Mac-1618186917964.local"
+    "value" : "Mac-1618187062606.local"
   }, {
     "name" : "thread",
-    "value" : "18694@Mac-1618186917964.local.Test worker(9)"
+    "value" : "18920@Mac-1618187062606.local.Test worker(9)"
   }, {
     "name" : "framework",
     "value" : "junit-platform"
@@ -105,11 +105,19 @@
         "failed" : 0,
         "broken" : 1,
         "skipped" : 0,
-        "passed" : 1,
+        "passed" : 2,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
+        "uid" : "1d079c1db6cebc95",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618188961052,
+          "stop" : 1618189451068,
+          "duration" : 490016
+        }
+      }, {
         "uid" : "91203c2b915f337f",
         "status" : "broken",
         "statusDetails" : "An element could not be located on the page using the given search parameters.\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618182982819.local', ip: '10.40.0.36', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.ios.IOSDriver\nCapabilities {app: sut_app/app/racinesut.zip, automationName: XCUITest, browserName: , databaseEnabled: false, deviceName: iPhone 11 Pro Max, javascriptEnabled: true, language: ja, locale: ja_JP, locationContextEnabled: false, networkConnectionEnabled: false, newCommandTimeout: 1000, platform: MAC, platformName: iOS, platformVersion: 14.0, takesScreenshot: true, udid: E4BE3EB0-6128-41F4-ABAD-237..., webStorageEnabled: false}\nSession ID: 0f2b7468-0dee-44f8-9595-4e84c20ec25c\n*** Element info: {Using=xpath, value=//android.widget.EditText[1]}",
@@ -122,6 +130,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "1d079c1db6cebc95.json",
+  "source" : "9f7f17d3a5239228.json",
   "parameterValues" : [ ]
 }
