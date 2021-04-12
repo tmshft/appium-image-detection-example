@@ -92,9 +92,7 @@ class TestMobileApp {
         driver.launchApp();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         if (os.equals("ios")) {
-            ((IOSBase)osInfo).iosDriver.startRecordingScreen(
-                    new IOSStartScreenRecordingOptions().withVideoType("mpeg4")
-            );
+            ((IOSBase)osInfo).iosDriver.startRecordingScreen();
         } else {
             ((AndroidBase)osInfo).androidDriver.startRecordingScreen();
         }
