@@ -7,6 +7,7 @@ import io.appium.java_client.imagecomparison.OccurrenceMatchingResult;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
 import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterEach;
@@ -24,6 +25,8 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
@@ -73,16 +76,12 @@ class TestMobileApp {
     }
 
     @AfterEach
-    void tearDown() {
+    void tearDown() throws IOException {
         if (driver != null) {
             String base64Video = ((CanRecordScreen) driver).stopRecordingScreen();
-            //Files.write(Paths.get(String.format("./build/test_%s.mov",osInfo.osName())), Base64.getDecoder().decode(base64Video));
-            Allure.addAttachment(
-                    String.format("test_%s.mov",osInfo.osName()),
-                    "video/quicktime",
-                    new ByteArrayInputStream(Base64.getDecoder().decode(base64Video)),
-                    "mov"
-            );
+            String path = String.format("./build/test_%s.mp4",osInfo.osName());
+            Files.write(Paths.get(path), Base64.getDecoder().decode(base64Video));
+            attachVideo(path);
             driver.closeApp();
         }
     }
@@ -125,5 +124,16 @@ class TestMobileApp {
 
     private static void addAttachment(byte[] byteArray, String imageName) {
         Allure.addAttachment(imageName, "image/png", new ByteArrayInputStream(byteArray), "png");
+    }
+
+    @SuppressWarnings("UnusedReturnValue")
+    @Attachment(value = "video",type="video/mp4")
+    private byte[] attachVideo(String path) throws IOException {
+        return getFile(path);
+    }
+
+    private byte[] getFile(String fileName) throws IOException {
+        File file = new File(fileName);
+        return Files.readAllBytes(Paths.get(file.getAbsolutePath()));
     }
 }
