@@ -1,39 +1,39 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "Mac-1618195901015.local",
+    "name" : "Mac-1618198749831.local",
     "children" : [ {
-      "name" : "18682@Mac-1618195901015.local.Test worker(9)",
+      "name" : "18719@Mac-1618198749831.local.Test worker(9)",
       "children" : [ {
-        "name" : "[1] ios",
-        "uid" : "b527e76a7bcdb7be",
-        "parentUid" : "8d189f1f0afd19212384a1a4f066fae1",
-        "status" : "passed",
+        "name" : "[2] android",
+        "uid" : "c885be0f186e5597",
+        "parentUid" : "fdd3b34d5254d2efa85f9f6aa7ab49ea",
+        "status" : "broken",
         "time" : {
-          "start" : 1618197689043,
-          "stop" : 1618198198160,
-          "duration" : 509117
+          "start" : 1618201687625,
+          "stop" : 1618201767641,
+          "duration" : 80016
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "[2] android",
-        "uid" : "765ba40afb4a760f",
-        "parentUid" : "8d189f1f0afd19212384a1a4f066fae1",
-        "status" : "broken",
+        "name" : "[1] ios",
+        "uid" : "e8820e655662703e",
+        "parentUid" : "fdd3b34d5254d2efa85f9f6aa7ab49ea",
+        "status" : "passed",
         "time" : {
-          "start" : 1618198198455,
-          "stop" : 1618198275452,
-          "duration" : 76997
+          "start" : 1618201175296,
+          "stop" : 1618201687363,
+          "duration" : 512067
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8d189f1f0afd19212384a1a4f066fae1"
+      "uid" : "fdd3b34d5254d2efa85f9f6aa7ab49ea"
     } ],
-    "uid" : "a2d1d53e126bbdf7e548eaa443b9adb3"
+    "uid" : "3ea1bc9e00a7d278848234b5f2b3710b"
   } ],
   "name" : "timeline"
 }

@@ -4,26 +4,26 @@
     "name" : "jp.shiftinc.automation.trial.TestMobileApp",
     "children" : [ {
       "name" : "[1] ios",
-      "uid" : "b527e76a7bcdb7be",
+      "uid" : "e8820e655662703e",
       "parentUid" : "46258ba5f8150126f36cc0c5f3008df8",
       "status" : "passed",
       "time" : {
-        "start" : 1618197689043,
-        "stop" : 1618198198160,
-        "duration" : 509117
+        "start" : 1618201175296,
+        "stop" : 1618201687363,
+        "duration" : 512067
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "[2] android",
-      "uid" : "765ba40afb4a760f",
+      "uid" : "c885be0f186e5597",
       "parentUid" : "46258ba5f8150126f36cc0c5f3008df8",
       "status" : "broken",
       "time" : {
-        "start" : 1618198198455,
-        "stop" : 1618198275452,
-        "duration" : 76997
+        "start" : 1618201687625,
+        "stop" : 1618201767641,
+        "duration" : 80016
       },
       "flaky" : false,
       "newFailed" : false,
