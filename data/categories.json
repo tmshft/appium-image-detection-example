@@ -3,22 +3,22 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "An unknown server-side error occurred while processing the command. Original error: Cannot find any occurrences of the partial image in the full image. Original error: Error: Cannot find any occurrences of the partial image in the full image above the threshold of 0.6. Highest match value found was 0.26523658633232117\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618198749831.local', ip: '10.212.11.68', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: sut_app/app/racinesut.apk, appPackage: jp.shiftinc.automation.racine, automationName: UiAutomator2, databaseEnabled: false, desired: {app: sut_app/app/racinesut.apk, automationName: UiAutomator2, deviceName: Android Emulator, newCommandTimeout: 1000, platformName: android, platformVersion: 9.0}, deviceApiLevel: 28, deviceManufacturer: unknown, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 160, deviceScreenSize: 320x640, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 1000, pixelRatio: 1, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 24, takesScreenshot: true, viewportRect: {height: 616, left: 0, top: 24, width: 320}, warnings: {}, webStorageEnabled: false}\nSession ID: 0f7f630e-da4d-4c6f-b270-8368d7a33f78",
+      "name" : "An unknown server-side error occurred while processing the command. Original error: Cannot find any occurrences of the partial image in the full image. Original error: Error: Cannot find any occurrences of the partial image in the full image above the threshold of 0.6. Highest match value found was 0.26523658633232117\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'Mac-1618200893489.local', ip: '10.212.11.92', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_282'\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {app: sut_app/app/racinesut.apk, appPackage: jp.shiftinc.automation.racine, automationName: UiAutomator2, databaseEnabled: false, desired: {app: sut_app/app/racinesut.apk, automationName: UiAutomator2, deviceName: Android Emulator, newCommandTimeout: 1000, platformName: android, platformVersion: 9.0}, deviceApiLevel: 28, deviceManufacturer: unknown, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 160, deviceScreenSize: 320x640, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 1000, pixelRatio: 1, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 24, takesScreenshot: true, viewportRect: {height: 616, left: 0, top: 24, width: 320}, warnings: {}, webStorageEnabled: false}\nSession ID: ca1002bb-9474-428e-af9e-7b81dba4cbee",
       "children" : [ {
         "name" : "[2] android",
-        "uid" : "c885be0f186e5597",
-        "parentUid" : "8d030cb6307e40d32d45268497071051",
+        "uid" : "fba57a076e456738",
+        "parentUid" : "a027adb60000c24a628c25927d8b6098",
         "status" : "broken",
         "time" : {
-          "start" : 1618201687625,
-          "stop" : 1618201767641,
-          "duration" : 80016
+          "start" : 1618204459484,
+          "stop" : 1618204542037,
+          "duration" : 82553
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8d030cb6307e40d32d45268497071051"
+      "uid" : "a027adb60000c24a628c25927d8b6098"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
