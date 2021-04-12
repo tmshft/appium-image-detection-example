@@ -4,26 +4,26 @@
     "name" : "Appiumイメージセレクタテスト",
     "children" : [ {
       "name" : "[1] ios",
-      "uid" : "1486262746fddb53",
+      "uid" : "4c65acd7a126a2c4",
       "parentUid" : "cae4ef3928793ed7b3b15653a000780d",
       "status" : "passed",
       "time" : {
-        "start" : 1618193146728,
-        "stop" : 1618193609797,
-        "duration" : 463069
+        "start" : 1618195243470,
+        "stop" : 1618195797645,
+        "duration" : 554175
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "[2] android",
-      "uid" : "d613840928a2881f",
+      "uid" : "b9b57dddefc1d668",
       "parentUid" : "cae4ef3928793ed7b3b15653a000780d",
       "status" : "passed",
       "time" : {
-        "start" : 1618193610099,
-        "stop" : 1618193679239,
-        "duration" : 69140
+        "start" : 1618195797982,
+        "stop" : 1618195876692,
+        "duration" : 78710
       },
       "flaky" : false,
       "newFailed" : false,
