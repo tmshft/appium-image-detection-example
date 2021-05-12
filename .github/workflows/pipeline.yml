@@ -1,4 +1,4 @@
-name: Appium iOS gui test example
+name: Appium gui test example
 on:
   pull_request:
     branches:
@@ -22,25 +22,35 @@ jobs:
       - name: specify valid Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_12.0.1.app
 
-      - name: set up node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '10.16.3'
-
       - name: set up opencv4nodejs
         run: |
           brew install cmake
           npm install -g opencv4nodejs
+          brew install ffmpeg
 
       - name: set up Appium
         run: |
           npm install -g appium@1.18.3
           appium --log-timestamp --log-no-colors > appium.log &
 
-      - name: execute test
+      - name: Run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 28
+          script: |
+            chmod +x ./gradlew && ./gradlew clean test
+
+      - name: checkout page-branch
+        uses: actions/checkout@v2
+        with:
+          ref: test-report
+          path: build/past_report
+
+      - name: inject report history
         run: |
-          chmod +x ./gradlew
-          ./gradlew clean test allureReport
+          mkdir -p build/past_report/history
+          cp -fr build/past_report/history build/allure-results
+          ./gradlew allureReport
 
       - name: deploy to pages
         uses: peaceiris/actions-gh-pages@v3
