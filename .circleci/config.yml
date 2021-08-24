@@ -1,0 +1,72 @@
+# CircleCI
+# RacineのCircleCI用サンプルパイプラインスクリプト
+#
+version: 2.1
+orbs:
+  node: circleci/node@4.7.0
+jobs:
+  mobile-job:
+    machine:
+      image: android:202102-01
+    resource_class: large
+    working_directory: ~/repo
+    environment:
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - ""
+      - run:
+          name: AVD の作成
+          command: |
+            SYSTEM_IMAGES="system-images;android-29;default;x86"
+            sdkmanager "$SYSTEM_IMAGES"
+            echo "no" | avdmanager --verbose create avd -n test -k "$SYSTEM_IMAGES"
+
+      - run:
+          name: エミュレーター起動
+          command: |
+            emulator -avd test -delay-adb -verbose -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          background: true
+
+      - run:
+          name: SUTアプリのCheckout
+          command: |
+            export GIT_SSH_COMMAND="ssh -v -o BatchMode=yes -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -l $codecommit_id"
+            git submodule add --force $codecommit_sut_repo sut_app
+            git submodule update -i --remote
+
+      - node/install:
+          install-yarn: true
+
+      - run:
+          name: Appiumのインストール及び起動
+          command: |
+            npm install -g appium
+            appium
+          background: true
+
+      - run:
+          name: Racineテスト実行
+          command: |
+            ./gradlew clean test allureReport
+          when: always
+
+      - store_artifacts:
+          name: 成果物を保存
+          path: ~/repo/common/build/reports/allure-report
+          destination: allure-report
+
+workflows:
+  version: 2.1
+  build_and_test:
+      - mobile-job:
+          context:
+            - codecommit
+          filters:
+            branches:
+              only: 
+                - master
+                - /.*circleci.*/
