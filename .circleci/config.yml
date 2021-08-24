@@ -41,10 +41,10 @@ jobs:
       - node/install:
           install-yarn: true
 
-      - run:
-          name: set up opencv4nodejs
-          command: |
-            npm install -g opencv4nodejs
+      # - run:
+      #     name: set up opencv4nodejs
+      #     command: |
+      #       npm install -g opencv4nodejs
 
       - run:
           name: Appiumのインストール及び起動
