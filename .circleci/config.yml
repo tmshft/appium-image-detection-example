@@ -1,5 +1,5 @@
+#
 # CircleCI
-# RacineのCircleCI用サンプルパイプラインスクリプト
 #
 version: 2.1
 orbs:
@@ -42,6 +42,11 @@ jobs:
           install-yarn: true
 
       - run:
+          name: set up opencv4nodejs
+          command: |
+            npm install -g opencv4nodejs
+
+      - run:
           name: Appiumのインストール及び起動
           command: |
             npm install -g appium
@@ -57,7 +62,7 @@ jobs:
 
       - store_artifacts:
           name: 成果物を保存
-          path: ~/repo/common/build/reports/allure-report
+          path: ~/repo/build/reports/allure-report
           destination: allure-report
 
 workflows:
