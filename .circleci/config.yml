@@ -17,7 +17,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - ""
+            - "8a:4b:0f:f5:45:49:56:b0:a6:36:17:da:28:34:f2:36"
       - run:
           name: AVD の作成
           command: |
