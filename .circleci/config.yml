@@ -49,8 +49,9 @@ jobs:
           background: true
 
       - run:
-          name: Racineテスト実行
+          name: テスト実行
           command: |
+            chmod +x ./gradlew
             ./gradlew clean test allureReport
           when: always
 
